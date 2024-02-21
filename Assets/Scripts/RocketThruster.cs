@@ -7,6 +7,8 @@ public class RocketThruster : MonoBehaviour
 {
     [SerializeField] private float thrustForce = 4f;
     [SerializeField] private float speedLimit = 10f;
+    [SerializeField] private float thrustTorque = 1f;
+
     private Rigidbody2D rb;
     bool inputSpace;
     private Vector2 inputVector;
@@ -21,15 +23,16 @@ public class RocketThruster : MonoBehaviour
     void  Update()
     {
         //space
-        if (inputSpace) rb.AddForce(Vector2.up * thrustForce);
+        if (inputSpace) rb.AddForce(transform.up * thrustForce);
 
         //left right
-        rb.addForce(inputVector * thrustForce);
+        rb.AddTorque(-inputVector.x * thrustTorque);
 
         if (rb.velocity.magnitude > speedLimit)
         {
             rb.velocity = rb.velocity.normalized * speedLimit;
         }
+        //check position, to make it teleport left and right
     }
 
     void OnThrustUp(InputValue val)
@@ -39,7 +42,8 @@ public class RocketThruster : MonoBehaviour
 
     void OnThrustDirection(InputValue val)
     {
-        inputVector = val.Get<Vector2>(); 
+        inputVector = val.Get<Vector2>();
+        Debug.Log("test");
     }
 }
 
