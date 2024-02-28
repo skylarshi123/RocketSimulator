@@ -19,6 +19,8 @@ public class UI_FuelTracker : MonoBehaviour
         
     }
 
+    // code for a health bar, similar to a fuel tracker
+
     /*public Slider healthBar;
     public Health playerHealth;
     private void Start()
