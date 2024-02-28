@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class UI_FuelTracker : MonoBehaviour
 {
@@ -15,4 +18,18 @@ public class UI_FuelTracker : MonoBehaviour
     {
         
     }
+
+    /*public Slider healthBar;
+    public Health playerHealth;
+    private void Start()
+    {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        healthBar = GetComponent<Slider>();
+        healthBar.maxValue = playerHealth.maxHealth;
+        healthBar.value = playerHealth.maxHealth;
+    }
+    public void SetHealth(int hp)
+    {
+        healthBar.value = hp;
+    }*/
 }
