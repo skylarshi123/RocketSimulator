@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class RocketThruster : MonoBehaviour
 {
-    [SerializeField] private float thrustForce = 4f;
+    [SerializeField] private float thrustForce = 400f;
     [SerializeField] private float speedLimit = 10f;
     [SerializeField] private float thrustTorque = 1f;
     [SerializeField] private float threshold = 10f;
@@ -36,7 +36,10 @@ public class RocketThruster : MonoBehaviour
 
         transform.position = Camera.main.ViewportToWorldPoint(screenPos);
         //space
-        if (inputSpace) rb.AddForce(transform.up * thrustForce);
+        if (inputSpace) {
+            Debug.Log("Up");
+            rb.AddForce(transform.up * thrustForce);
+        }
 
         //left right
         rb.AddTorque(-inputVector.x * thrustTorque);
