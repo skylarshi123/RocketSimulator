@@ -288,6 +288,7 @@ MonoBehaviour:
   thrustTorque: 1
   threshold: 1
   goodAngle: 5
+  fire: {fileID: 0}
 --- !u!50 &417649100
 Rigidbody2D:
   serializedVersion: 4
