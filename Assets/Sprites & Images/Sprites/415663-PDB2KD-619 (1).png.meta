@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4dba56afdc4b2e645977a1607837a30a
+guid: 7cf606ea2c8524a0e9c509c92bf20b74
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,12 +121,63 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 415663-PDB2KD-619 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1228
+        width: 546
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4562c1adb842c41019928471665670ca
+      internalID: -394593524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 415663-PDB2KD-619 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 178
+        width: 223
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e05e7472ea5a40a5bc66fa3d5902766
+      internalID: -212571357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
-    - - {x: -776, y: 25}
-      - {x: -776, y: 852}
-      - {x: -303, y: 852}
-      - {x: -303, y: 25}
+    - - {x: -544, y: 228}
+      - {x: -785, y: 228}
+      - {x: -785, y: 837}
+      - {x: -318, y: 837}
+      - {x: -318, y: 228}
+    - - {x: -645, y: 223}
+      - {x: -645, y: 225}
+      - {x: -457, y: 225}
+      - {x: -464, y: 220}
+    - - {x: -89, y: -829}
+      - {x: -94, y: -625}
+      - {x: 170, y: -625}
+      - {x: 161, y: -829}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
@@ -136,7 +187,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      415663-PDB2KD-619 (1)_0: -394593524
+      415663-PDB2KD-619 (1)_1: -212571357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

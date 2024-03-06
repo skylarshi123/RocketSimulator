@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class RocketThruster : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class RocketThruster : MonoBehaviour
     [SerializeField] private float thrustTorque = 1f;
     [SerializeField] private float threshold = 10f;
     [SerializeField] private float goodAngle = 5f;
+
+    [SerializeField] private GameObject fire;
 
     private Rigidbody2D rb;
     bool inputSpace;
@@ -39,6 +42,11 @@ public class RocketThruster : MonoBehaviour
         if (inputSpace) {
             Debug.Log("Up");
             rb.AddForce(transform.up * thrustForce);
+            fire.SetActive(true);
+        }
+        else
+        {
+            fire.SetActive(false);
         }
 
         //left right
@@ -82,6 +90,7 @@ public class RocketThruster : MonoBehaviour
         {
             //failed, reset the game to home page
             Debug.Log("Failed");
+            SceneManager.LoadScene("EndScreen");
         }
     }
 }
