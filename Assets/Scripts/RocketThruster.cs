@@ -36,6 +36,7 @@ public class RocketThruster : MonoBehaviour
 
         transform.position = Camera.main.ViewportToWorldPoint(screenPos);
         //space
+        // add thrust sound
         if (inputSpace) {
             Debug.Log("Up");
             rb.AddForce(transform.up * thrustForce);
