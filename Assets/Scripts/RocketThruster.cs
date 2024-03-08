@@ -14,6 +14,8 @@ public class RocketThruster : MonoBehaviour
 
     [SerializeField] private GameObject fire;
 
+    [SerializeField] AudioSource audioSource;
+
     private Rigidbody2D rb;
     bool inputSpace;
     private Vector2 inputVector;
@@ -25,7 +27,7 @@ public class RocketThruster : MonoBehaviour
     }
 
     // Update is called once per frame
-    void  Update()
+    void Update()
     {
         Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
         if (screenPos.x > 1)
@@ -39,16 +41,22 @@ public class RocketThruster : MonoBehaviour
 
         transform.position = Camera.main.ViewportToWorldPoint(screenPos);
         //space
-        // add thrust sound
         if (inputSpace) {
             Debug.Log("Up");
-            rb.AddForce(transform.up * thrustForce);
+            rb.AddForce(transform.up* thrustForce);
             fire.SetActive(true);
+            // adds thrust sound
+            if (inputSpace && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
         else
         {
             fire.SetActive(false);
+            audioSource.Stop();
         }
+    
 
         //left right
         rb.AddTorque(-inputVector.x * thrustTorque);
