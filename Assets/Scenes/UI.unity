@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 651114937}
   - component: {fileID: 651114936}
   m_Layer: 0
-  m_Name: for music (don't need to copy over)
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
