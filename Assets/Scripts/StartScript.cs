@@ -14,7 +14,6 @@ public class StartScript : MonoBehaviour
     {
         // Add listeners for button clicks.
         endGameButton.onClick.AddListener(Terminate);
-        nextLevelButton.onClick.AddListener(StartLevel);
     }
 
 
@@ -25,8 +24,9 @@ public class StartScript : MonoBehaviour
         Application.Quit();
     }
 
-    void StartLevel()
+    public void StartLevel()
     {
+        Debug.Log("Last level reached. No more levels to load.");
         // Loads the next level based on the current scene's build index.
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;

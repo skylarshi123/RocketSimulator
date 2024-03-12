@@ -14,12 +14,9 @@ public class FailScreen : MonoBehaviour
     private void Start()
     {
         // Add listeners for button clicks.
-        restartButton.onClick.AddListener(RestartLevel);
-        endGameButton.onClick.AddListener(EndGame);
-        nextLevelButton.onClick.AddListener(NextLevel);
     }
 
-    void RestartLevel()
+    public void RestartLevel()
     {
         // Reloads the current scene.
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -32,14 +29,14 @@ public class FailScreen : MonoBehaviour
 
     }
 
-    void EndGame()
+    public void EndGame()
     {
         // Quits the application.
         // Note: This will only work in a built game, not in the Unity Editor.
         Application.Quit();
     }
 
-    void NextLevel()
+    public void NextLevel()
     {
         // Loads the next level based on the current scene's build index.
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

@@ -41,7 +41,8 @@ public class RocketThruster : MonoBehaviour
 
         transform.position = Camera.main.ViewportToWorldPoint(screenPos);
         //space
-        if (inputSpace) {
+        if (inputSpace)
+        {
             Debug.Log("Up");
             rb.AddForce(transform.up* thrustForce);
             fire.SetActive(true);
@@ -100,6 +101,19 @@ public class RocketThruster : MonoBehaviour
             //failed, reset the game to home page
             Debug.Log("Failed");
             SceneManager.LoadScene("EndScreen");
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+
+            // Check if the next scene index exceeds the number of scenes in Build Settings.
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
+            else
+            {
+                Debug.Log("Last level reached. No more levels to load.");
+                // Opt
+            }
         }
     }
 }
