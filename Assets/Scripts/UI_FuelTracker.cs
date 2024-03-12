@@ -3,12 +3,32 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_FuelTracker : MonoBehaviour
 {
+    public Image fuelBar;
+    public float fuelAmount = 100f;
+
+    private void Update()
+    {
+        if(fuelAmount <= 0)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            loseFuel(5);
+        }
+    }
+    public void loseFuel(float fuelLost)
+    {
+        fuelAmount -= fuelLost;
+        fuelBar.fillAmount = fuelAmount / 100f;
+    }
     // Start is called before the first frame update
-    [SerializeField] Slider slider;
+    /*[SerializeField] Slider slider;
     private float fuel;
     void Start()
     {
@@ -21,6 +41,8 @@ public class UI_FuelTracker : MonoBehaviour
         SetFuel(GetFuel()-1);
         slider.value = fuel;
     }
+
+    
 
     public void SetFuel(float amt) {
         fuel = amt;
