@@ -12,7 +12,7 @@ public class EndScript : MonoBehaviour
         endGameButton.onClick.AddListener(Terminate);
     }
 
-    public void Terminate()
+    void Terminate()
     {
         // Quits the application.
         // Note: This will only work in a built game, not in the Unity Editor.

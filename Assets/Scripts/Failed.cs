@@ -22,12 +22,10 @@ public class FailScreen : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         // Ensure we do not exceed the number of scenes in our build settings.
-        // if (currentSceneIndex < SceneManager.sceneCountInBuildSettings)
-        // {
+        if (currentSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
             SceneManager.LoadScene(currentSceneIndex - 1);
-        // }
-        // else
-        //     SceneManager.LoadScene(currentSceneIndex);
+        }
 
     }
 
@@ -43,16 +41,29 @@ public class FailScreen : MonoBehaviour
         // Loads the next level based on the current scene's build index.
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
-        SceneManager.LoadScene(nextSceneIndex);
-        // // Check if the next scene index exceeds the number of scenes in Build Settings.
-        // if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        // {
-        //     SceneManager.LoadScene(nextSceneIndex);
-        // }
-        // else
-        // {
-        //     Debug.Log("Last level reached. No more levels to load.");
-        //     // Optionally, loop back to the first level or show a game over screen.
-        // }
+
+        // Check if the next scene index exceeds the number of scenes in Build Settings.
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.Log("Last level reached. No more levels to load.");
+            // Optionally, loop back to the first level or show a game over screen.
+        }
+    }
+
+    public void LoadNextScene()
+    {
+        //scenes playable are 1 2 3 end scene 0 finish scene 4
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        // Ensure we do not exceed the number of scenes in our build settings.
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
 }
