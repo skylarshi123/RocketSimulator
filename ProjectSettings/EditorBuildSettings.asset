@@ -18,11 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 915d3fda82ed243c1b8cc87af2ce5f19
   - enabled: 1
+    path: Assets/Scenes/EndScreen1.unity
+    guid: 061794dead95116469f117c2393611fb
+  - enabled: 0
     path: Assets/Scenes/EndingScreen 1.unity
     guid: b224195d77bf3446ab55fa8999e7e1b8
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: b17a75498867d4c01989a2d27941c71e
+  - enabled: 0
+    path: Assets/Scenes/EndingScreen 2.unity
+    guid: e458da067f165ae47b93cce89356ac24
+  - enabled: 1
+    path: Assets/Scenes/EndScreen2.unity
+    guid: 3c0a3d8dc96b4d644b909e4c837437b6
   - enabled: 1
     path: Assets/Scenes/Final Screen1.unity
     guid: 971079647833a4ce49d42beecb689e4e

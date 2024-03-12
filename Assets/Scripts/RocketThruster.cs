@@ -105,15 +105,15 @@ public class RocketThruster : MonoBehaviour
             int nextSceneIndex = currentSceneIndex + 1;
 
             // Check if the next scene index exceeds the number of scenes in Build Settings.
-            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-            {
+            // if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            // {
                 SceneManager.LoadScene(nextSceneIndex);
-            }
-            else
-            {
-                Debug.Log("Last level reached. No more levels to load.");
-                // Opt
-            }
+            // }
+            // else
+            // {
+            //     Debug.Log("Last level reached. No more levels to load.");
+            //     // Opt
+            // }
         }
     }
 }

@@ -17,7 +17,7 @@ public class StartScript : MonoBehaviour
     }
 
 
-    void Terminate()
+    public void Terminate()
     {
         // Quits the application.
         // Note: This will only work in a built game, not in the Unity Editor.
