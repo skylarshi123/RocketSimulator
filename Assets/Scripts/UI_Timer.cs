@@ -48,6 +48,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                // need to fix this to show correct endscreen
                 SceneManager.LoadScene("EndScreen");
                 // something happens when time runs out, like a "you lost" screen or something - tbd
             }
