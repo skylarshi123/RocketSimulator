@@ -13,9 +13,17 @@ public class UI_FuelTracker : MonoBehaviour
 
     private void Update()
     {
-        if(fuelAmount <= 0)
+        /*int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Ensure we do not exceed the number of scenes in our build settings.
+        if (currentSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene("EndScreen");
+            SceneManager.LoadScene(currentSceneIndex - 1);
+        }*/
+        if (fuelAmount <= 0)
+        {
+            // need to fix this
+            //SceneManager.LoadScene(currentSceneIndex);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
