@@ -6,18 +6,7 @@ public class StartScript : MonoBehaviour
 {
     // You can attach these buttons in the inspector by dragging and dropping.
 
-    [SerializeField] private Button endGameButton;
-    [SerializeField] private Button nextLevelButton;
-
-
-    private void Start()
-    {
-        // Add listeners for button clicks.
-        endGameButton.onClick.AddListener(Terminate);
-    }
-
-
-    void Terminate()
+    public void Terminate()
     {
         // Quits the application.
         // Note: This will only work in a built game, not in the Unity Editor.

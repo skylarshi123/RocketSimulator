@@ -2,15 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; // Include the UI namespace to work with UI elements.
 
-//final scene once player beats game
-public class EndScript : MonoBehaviour
+public class FailScreen : MonoBehaviour
 {
-
-    public void Terminate()
+    // You can attach these buttons in the inspector by dragging and dropping.
+    private void Start()
     {
-        // Quits the application.
-        // Note: This will only work in a built game, not in the Unity Editor.
-        Application.Quit();
+        // Add listeners for button clicks.
     }
 
     public void RestartLevel()
@@ -21,8 +18,15 @@ public class EndScript : MonoBehaviour
         // Ensure we do not exceed the number of scenes in our build settings.
         if (currentSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            SceneManager.LoadScene(currentSceneIndex - 3);
+            SceneManager.LoadScene(currentSceneIndex - 1);
         }
 
+    }
+
+    public void EndGame()
+    {
+        // Quits the application.
+        // Note: This will only work in a built game, not in the Unity Editor.
+        Application.Quit();
     }
 }

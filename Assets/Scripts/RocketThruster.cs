@@ -8,8 +8,8 @@ public class RocketThruster : MonoBehaviour
 {
     [SerializeField] private float thrustForce = 400f;
     [SerializeField] private float speedLimit = 10f;
-    [SerializeField] private float thrustTorque = 1f;
-    [SerializeField] private float threshold = 10f;
+    [SerializeField] private float thrustTorque = 0.3f;
+    [SerializeField] private float threshold = 20f;
     [SerializeField] private float goodAngle = 5f;
 
     [SerializeField] private GameObject fire;
@@ -95,12 +95,25 @@ public class RocketThruster : MonoBehaviour
             //UI page, score, etc
             Debug.Log(rb.velocity.magnitude);
             Debug.Log("Passed");
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 2;
+
+            // Check if the next scene index exceeds the number of scenes in Build Settings.
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
+            else
+            {
+                Debug.Log("Last level reached. No more levels to load.");
+                // Opt
+            }
+
         }
         else
         {
             //failed, reset the game to home page
             Debug.Log("Failed");
-            SceneManager.LoadScene("EndScreen");
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             int nextSceneIndex = currentSceneIndex + 1;
 
