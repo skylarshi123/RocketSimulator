@@ -13,17 +13,22 @@ public class UI_FuelTracker : MonoBehaviour
 
     private void Update()
     {
-        /*int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // Ensure we do not exceed the number of scenes in our build settings.
-        if (currentSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(currentSceneIndex - 1);
-        }*/
         if (fuelAmount <= 0)
         {
-            // need to fix this
-            //SceneManager.LoadScene(currentSceneIndex);
+            Debug.Log("Failed");
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+
+            // Check if the next scene index exceeds the number of scenes in Build Settings.
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+            }
+            else
+            {
+                Debug.Log("Last level reached. No more levels to load.");
+                // Opt
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
