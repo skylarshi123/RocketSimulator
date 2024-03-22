@@ -36,10 +36,4 @@ public class SoundSettings : MonoBehaviour
     {
         soundSlider.value = value;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

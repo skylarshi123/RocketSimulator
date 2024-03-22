@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     // i.e. 60 secs will be 1:00, 120 secs will be 2:00, and so on
     void DisplayTime(float timeToDisplay)
     {
-        // essential stops the timer by adding one more than the given time
+        // essentially stops the timer by adding one more than the given time
         timeToDisplay += 1;
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
@@ -48,9 +48,19 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                // need to fix this to show correct endscreen
-                SceneManager.LoadScene("EndScreen");
-                // something happens when time runs out, like a "you lost" screen or something - tbd
+
+                // fail screen if times runs out
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                int nextSceneIndex = currentSceneIndex + 1;
+                if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+                {
+                    SceneManager.LoadScene(nextSceneIndex);
+                }
+                else
+                {
+                    Debug.Log("Last level reached. No more levels to load.");
+                    // Opt
+                }
             }
         }
     }
