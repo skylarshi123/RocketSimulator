@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class RocketThruster : MonoBehaviour
 {
-    [SerializeField] private float thrustForce = 400f;
+    [SerializeField] private float thrustForce = 500f;
     [SerializeField] private float speedLimit = 10f;
-    [SerializeField] private float thrustTorque = 0.3f;
+    [SerializeField] private float thrustTorque = 0.5f;
     [SerializeField] private float threshold = 20f;
     [SerializeField] private float goodAngle = 5f;
 

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float timeRemaining = 10;
+    [SerializeField] float timeRemaining = 60;
     [SerializeField] bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     
