@@ -1011,8 +1011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrustForce: 4
-  speedLimit: 10
-  thrustTorque: 0.1
+  speedLimit: 8
+  thrustTorque: 0.09
   threshold: 10
   goodAngle: 5
   fire: {fileID: 1324484048}
