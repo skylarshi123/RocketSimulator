@@ -1020,10 +1020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa38526537b84223968f519933965da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustForce: 2
-  speedLimit: 5
+  thrustForce: 4
+  speedLimit: 10
   thrustTorque: 0.1
-  threshold: 1
+  threshold: 10
   goodAngle: 5
   fire: {fileID: 1324484048}
   audioSource: {fileID: 739069774}
@@ -1441,7 +1441,7 @@ AudioSource:
   m_GameObject: {fileID: 889829422}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0a83f379332f64d40886aa627ff766a4, type: 2}
   m_audioClip: {fileID: 8300000, guid: e3202ed471a7fef4694fc788f37b49f7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
@@ -2811,7 +2811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4debf583991df04e8e184283a13a6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelBar: {fileID: 0}
+  fuelBar: {fileID: 1198398686}
   fuelAmount: 100
 --- !u!4 &1748551777
 Transform:
